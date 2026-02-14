@@ -360,7 +360,7 @@ const App: React.FC = () => {
                   className="text-2xl sm:text-3xl md:text-4xl font-black text-white hover:text-uf-orange transition-all uppercase italic flex items-center group"
                 >
                   <span className="mr-4 md:mr-6">Apply for 2026 Season</span>
-                  <span className="text-uf-orange opacity-0 group-hover:opacity-100 transition-all -translate-x-4 group-hover:translate-x-0">>></span>
+                  <span className="text-uf-orange opacity-0 group-hover:opacity-100 transition-all -translate-x-4 group-hover:translate-x-0">{'>>'}</span>
                 </button>
               </div>
             </div>
