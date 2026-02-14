@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swamp Racing | Precision Performance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'uf-blue': '#0021A5',
+              'uf-orange': '#FA4616',
+              'carbon': '#0a0a0a',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        --scroll-pct: 0;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        /* Dynamic gradient that shifts center and intensity based on scroll percentage */
+        background: radial-gradient(
+          circle at calc(var(--scroll-pct) * 1% + 20%) calc(var(--scroll-pct) * 0.5% + 10%), 
+          #0021A5 0%, 
+          #050505 60%, 
+          #000000 100%
+        );
+        background-attachment: fixed;
+        color: #ffffff;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+      
+      .glass {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      
+      .glass-dark {
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(250, 70, 22, 0.3);
+      }
+
+      .tech-border {
+        position: relative;
+      }
+      .tech-border::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; width: 10px; height: 10px;
+        border-top: 2px solid #FA4616; border-left: 2px solid #FA4616;
+      }
+      .tech-border::after {
+        content: '';
+        position: absolute;
+        bottom: 0; right: 0; width: 10px; height: 10px;
+        border-bottom: 2px solid #FA4616; border-right: 2px solid #FA4616;
+      }
+
+      /* Hover bridge for menu */
+      .menu-bridge::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: 0;
+        right: 0;
+        height: 20px;
+        background: transparent;
+      }
+
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: #000; }
+      ::-webkit-scrollbar-thumb { background: #FA4616; border-radius: 0; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
